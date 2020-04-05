@@ -1,0 +1,8 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/e/Cproject/leetecode/tree
+CMake Error at CMakeLists.txt:1:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "/cmake_minimum_required".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/e/Cproject/leetecode/tree/cmake-build-debug/CMakeFiles/CMakeOutput.log".
