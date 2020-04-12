@@ -8,6 +8,8 @@
 
 class Solution:
     """判断是否为兄弟节点
+        1、在遍历过程中保存，x和y的父节点、level两个值
+        2、判断层次是否相同，再判断父节点
     """
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
         x_info = []

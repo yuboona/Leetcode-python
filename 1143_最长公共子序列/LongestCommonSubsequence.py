@@ -1,6 +1,5 @@
 import time
 
-
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         """简单版，只求公共序列的**长度**
@@ -57,7 +56,7 @@ class Solution:
 
     def longestCommonSubsequence4(self, text1: str, text2: str) -> int:
         """复杂版，求公共序列的**具体**
-            3. 递归版闭包版：**其实可以不传递字符串的，需要使用闭包函数**
+            3. 递归版闭包版：**不传递字符串的，需要使用闭包函数**
         """
         len1 = len(text1)
         len2 = len(text2)
@@ -74,37 +73,34 @@ class Solution:
         return dp(len1-1, len2-1)
 
 
+s = Solution()
 
-# s = Solution()
+s_t= time.time()
 
-# s_t= time.time()
+print(s.longestCommonSubsequence3('abcde', 'acfde'))
 
-# print(s.longestCommonSubsequence3('abcde', 'acfde'))
+e = time.time()
 
-# e = time.time()
-
-# print(e-s_t)
+print(e-s_t)
 
 
-s = input()
+# # 统计所有的*同字符*子串
+# s = input()
+# len1 = len(s)
+# start = 0
+# end = 0
 
-len1 = len(s)
-start = 0
-end = 0
-
-res = set()
-
-for i in range(len1-1):
-    if i == 0:
-        end = i+1
-        res.add(s[start:end])
-        continue
-    if s[i] == s[i-1]:
-        end = i+1
-        res.add(s[start:end])
-    else:
-        start = i
-        end = i
-        res.add(s[i])
-print(len(res))
-
+# res = set()
+# for i in range(len1-1):
+#     if i == 0:
+#         end = i+1
+#         res.add(s[start:end])
+#         continue
+#     if s[i] == s[i-1]:
+#         end = i+1
+#         res.add(s[start:end])
+#     else:
+#         start = i
+#         end = i
+#         res.add(s[i])
+# print(len(res))

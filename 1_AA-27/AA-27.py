@@ -5,6 +5,8 @@ dict_ = {i: chr(64+i) for i in range(1, 27)}
 # 存储结果
 res = []
 
+open(file='./')
+
 while True:
     # 当num小于27时，表示最高位已不可进位
     if num == 0:

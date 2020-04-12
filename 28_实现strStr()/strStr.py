@@ -4,7 +4,7 @@ class Solution:
         """
         len1 = len(haystack)
         len2 = len(needle)
-        if len1=='':
+        if len1 == '':
             return -1
 
         for i in range(len1-len2+1):
@@ -17,6 +17,8 @@ class Solution:
                 return i
             visited = 0
         return -1
+
+        # TODO 动态规划法
 
 
 

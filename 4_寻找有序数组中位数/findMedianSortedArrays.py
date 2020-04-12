@@ -30,3 +30,5 @@ class Solution:
         else:
             return res[int((len1+len2)/2)]
 
+        # TODO 中位数数学理论解法
+

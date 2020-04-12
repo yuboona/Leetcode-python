@@ -10,7 +10,7 @@ from collections import deque
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         """迭代方法
-            遍历不变，只改变不同层存入temp list的方向
+            level迭代遍历不变，在插入值时，根据输出方向的不同，进行头或尾的插入
         """
         if not root:
             return []
