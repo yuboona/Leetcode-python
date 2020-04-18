@@ -23,5 +23,6 @@ def inOrder(root):
             stack.append(out.right)
             cur = out.right
         else:
-            stack[-1].left = None        # 这样保证了父节点不再压栈左节点
+            # NOTE 置空，这样保证了父节点不再压栈左节点
+            stack[-1].left = None
             cur = stack[-1]
