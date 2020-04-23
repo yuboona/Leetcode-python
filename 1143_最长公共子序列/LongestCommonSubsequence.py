@@ -11,8 +11,13 @@ class Solution:
         for i in range(1, len1+1):
             for j in range(1, len2+1):
                 if text1[i-1] == text2[j-1]:
+                    # 为什么加1？因为从数学上的从属性质来看，由于i串大于i-1串，
+                    # 所以dp[i][j] >= dp[i-1][j]的一定存在，不需要考虑
+                    # 同理dp[i][j] >= dp[i][j-1]的一定存在，不需要考虑
+                    # 但dp[i][j]此时必须更新，所以只需要考虑dp[i-1][j-1]+1，最长子序列更新dp[i][j]
                     dp[i][j] = dp[i-1][j-1] + 1
                 else:
+                    # 此时，i!=j。选dp[i][j-1], dp[i-1][j]中最大的那个更新
                     dp[i][j] = max(dp[i][j-1], dp[i-1][j])
         return dp[i][j]
 
