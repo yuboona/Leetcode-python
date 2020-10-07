@@ -13,6 +13,7 @@ def quick(nums, p, r):
 
 
 def partition(nums, p, r):
+    # 双指针，i指针负责记录记录大于的元素的开始位置，一旦j元素小于r，则可以替换到i的位置，把大的元素替换走。
     mid = nums[r]       # 末尾
     i = p-1     # 从-1起始
     for j in range(p, r):

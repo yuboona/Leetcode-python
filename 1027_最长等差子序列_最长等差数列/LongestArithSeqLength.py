@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         """
@@ -26,6 +27,8 @@ class Solution:
         return res
 
 
-
-S = Solution()
-S.longestArithSeqLength([3,6,9,12])
+if __name__ == "__main__":
+    S = Solution()
+    # S.longestArithSeqLength([3,6,9,12])
+    res = S.longestArithSeqLength([1, 4, 2, 5, 3])
+    print(res)
